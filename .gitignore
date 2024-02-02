@@ -1,0 +1,8 @@
+outputs
+demo_outputs
+saved
+wandb
+ckpt
+data/audiocaps_test_references
+*/__pycache__/*
+.DS_Store

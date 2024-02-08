@@ -9,12 +9,12 @@ scheduler_name="stabilityai/stable-diffusion-2-1"
 # tango_model="ckpt/declare-lab/tango-full-ft-audiocaps.pth"
 # Lightweight setting (our lightweight TANGO)
 unet_model_config="configs/tango_diffusion_light.json"
-tango_model="saved/LightweightTANGO/best/pytorch_model_2.bin"
+tango_model="saved/LightweightLDM/best/pytorch_model_2.bin"
 
 stage1_model="saved/Stage1_variable_w/best/pytorch_model_2.bin"
 stage2_model="saved/Stage2_variable_w/epoch_60/pytorch_model_2.bin"
 
-# Train the lightweight LCM from scratch with a flan-t5-large text encoder and mixed precision
+# Train ConsistencyTTA with a flan-t5-large text encoder and mixed precision
 # Stage 1 (Optional) -- Distill into a variable-guidance latent diffusion model
 CUDA_VISIBLE_DEVICES="0, 1" accelerate launch train.py --stage 1 \
 --train_file=$train_file --validation_file=$validation_file --test_file=$test_file \

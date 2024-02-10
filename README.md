@@ -25,6 +25,10 @@ our models retain diffusion models' impressive generation quality and diversity.
 Furthermore, the non-recurrent differentiable structure of the consistency model allows for end-to-end fine-tuning with novel loss functions such as the CLAP score,
 further boosting performance.
 
+<center>
+  <img src="main_figure_.png" alt="ConsistencyTTA Results" title="Results" width="480"/>
+</center>
+
 
 ## Getting Started
 

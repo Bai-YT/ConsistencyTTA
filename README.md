@@ -18,11 +18,13 @@ and [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi).
 
 ## Description
 
-This work proposes a *consistency distillation* framework to train text-to-audio (TTA) generation models that only require a single neural network query,
+This work proposes a *consistency distillation* framework to train text-to-audio (TTA)
+generation models that only require a single neural network query,
 reducing the computation of the core step of diffusion-based TTA models by a factor of 400.
 By incorporating *classifier-free guidance* into the distillation framework,
 our models retain diffusion models' impressive generation quality and diversity.
-Furthermore, the non-recurrent differentiable structure of the consistency model allows for end-to-end fine-tuning with novel loss functions such as the CLAP score,
+Furthermore, the non-recurrent differentiable structure of the consistency model allows
+for end-to-end fine-tuning with novel loss functions such as the CLAP score,
 further boosting performance.
 
 <center>
@@ -32,7 +34,8 @@ further boosting performance.
 
 ## Getting Started
 
-This codebase uses PyTorch as the central implementation tool, with heavy usage of HuggingFace's Accelerator package. The required packages can be found in `environment.yml`.
+This codebase uses PyTorch as the central implementation tool, with extensive usage of HuggingFace's Accelerator package.
+The required packages can be found in `environment.yml`.
 
 
 ### Model Checkpoints
@@ -91,12 +94,14 @@ The trained model checkpoints will be stored in the `/saved` directory.
 The teacher model for our distilled consistency models is based on [TANGO](https://github.com/declare-lab/tango),
 a state-of-the-art TTA generation framework based on latent diffusion models.
 
-The training script should automatically download the AudioLDM weights from [here](https://zenodo.org/record/7600541/files/audioldm-s-full?download=1). However if the download is slow or if you face any other issues then you can:
+The training script should automatically download the AudioLDM weights from [here](https://zenodo.org/record/7600541/files/audioldm-s-full?download=1).
+However, if the download is slow or if you face any other issues, then you can:
 i) download the `audioldm-s-full` file from [here](https://huggingface.co/haoheliu/AudioLDM-S-Full/tree/main),
 ii) rename it to `audioldm-s-full.ckpt`,
 and iii) keep it in the `/home/user/.cache/audioldm/` directory.
 
-For fine-tuning and evaluating with CLAP, we use [this](https://huggingface.co/lukewys/laion_clap/resolve/main/music_audioset_epoch_15_esc_90.14.pt) CLAP model checkpoint from [this](https://github.com/LAION-AI/CLAP) repository.
+For fine-tuning and evaluating with CLAP, we use [this](https://huggingface.co/lukewys/laion_clap/resolve/main/music_audioset_epoch_15_esc_90.14.pt)
+CLAP model checkpoint from [this](https://github.com/LAION-AI/CLAP) repository.
 After downloading, place it into the `/ckpt` directory.
 
 On two Nvidia RTX 6000 Ada GPUs, Stage 1 (40 epochs) should take ~40 hours,
@@ -122,7 +127,8 @@ Our evaluation metrics include Fréchet Audio Distance (FAD), Fréchet Distance 
 | Consistency + CLAP FT (Ours) | 1                | 24.69                | 72.54                   | 2.406   | 20.97  | 1.358   |
 | Consistency (Ours)           | 1                | 22.50                | 72.30                   | 2.575   | 22.08  | 1.354   |
 
-[This PaperWithCode benchmark](https://paperswithcode.com/sota/audio-generation-on-audiocaps) demonstrates how our single-step models stack up with previous methods, most of which mostly require hundreds of generation steps.
+[This PaperWithCode benchmark](https://paperswithcode.com/sota/audio-generation-on-audiocaps) demonstrates how our single-step models
+stack up against previous methods, most of which mostly require hundreds of generation steps.
 
 
 ## Cite Our Work (BibTeX)
@@ -146,6 +152,7 @@ We sincerely appreciate the the authors of these repositories for open-sourcing 
 Please refer to `NOTICE.md` for license information.
 
 **Trademarks.** This project may contain trademarks or logos for projects, products, or services.
-Authorized use of Microsoft trademarks or logos is subject to and must follow [Microsoft’s Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
+Authorized use of Microsoft trademarks or logos is subject to and must follow
+[Microsoft’s Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
 Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
 Any use of third-party trademarks or logos are subject to those third-party’s policies.

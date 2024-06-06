@@ -31,6 +31,10 @@ further boosting performance.
   <img src="main_figure_.png" alt="ConsistencyTTA Results" title="Results" width="480"/>
 </center>
 
+**2024/06 Updates:**
+
+- ConsistencyTTA has been accepted to ***INTERSPEECH 2024***! We look forward to meeting you in Kos Island.
+
 
 ## Getting Started
 

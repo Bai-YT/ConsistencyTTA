@@ -1,4 +1,4 @@
-## Lightweight for ConsistencyTTA
+## Easy ConsistencyTTA Inference
 
 Required packages:
 `numpy scipy torch torchaudio einops soundfile librosa transformers`

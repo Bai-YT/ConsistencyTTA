@@ -1,7 +1,7 @@
 # ConsistencyTTA: Accelerating Diffusion-Based Text-to-Audio Generation with Consistency Distillation
 
 This is the **official** code implementation for the paper \
-"Accelerating Diffusion-Based Text-to-Audio Generation with Consistency Distillation" \
+*ConsistencyTTA: Accelerating Diffusion-Based Text-to-Audio Generation with Consistency Distillation* \
 from Microsoft Applied Science Group and UC Berkeley \
 by [Yatong Bai](https://bai-yt.github.io),
 [Trung Dang](https://www.microsoft.com/applied-sciences/people/trung-dang),
@@ -9,14 +9,21 @@ by [Yatong Bai](https://bai-yt.github.io),
 [Kazuhito Koishida](https://www.microsoft.com/applied-sciences/people/kazuhito-koishida),
 and [Somayeh Sojoudi](https://people.eecs.berkeley.edu/~sojoudi).
 
+**[[🤗 Live Demo](https://huggingface.co/spaces/Bai-YT/ConsistencyTTA)]** &nbsp;&nbsp;&nbsp;&nbsp;
 **[[Preprint Paper](https://arxiv.org/abs/2309.10740)]** &nbsp;&nbsp;&nbsp;&nbsp;
-**[[Project Homepage](https://consistency-tta.github.io)]** &nbsp;&nbsp;&nbsp;&nbsp;
+**[[Project Homepage](https://consistency-tta.github.io)]** &nbsp;&nbsp;&nbsp;&nbsp; \
 **[[Code](https://github.com/Bai-YT/ConsistencyTTA)]** &nbsp;&nbsp;&nbsp;&nbsp;
 **[[Model Checkpoints](https://huggingface.co/Bai-YT/ConsistencyTTA)]** &nbsp;&nbsp;&nbsp;&nbsp;
 **[[Generation Examples](https://consistency-tta.github.io/demo.html)]**
 
 
 ## Description
+
+**2024/06 Updates:**
+
+- We have hosted an interactive live demo of ConsistencyTTA at [🤗 Huggingface](https://huggingface.co/spaces/Bai-YT/ConsistencyTTA).
+- ConsistencyTTA has been accepted to ***INTERSPEECH 2024***! We look forward to meeting you in Kos Island.
+- We added a simpler inference-only implementation to the [`easy_inference`](https://github.com/Bai-YT/ConsistencyTTA/tree/main/easy_inference) directory of this repo.
 
 This work proposes a *consistency distillation* framework to train text-to-audio (TTA)
 generation models that only require a single neural network query,
@@ -28,15 +35,14 @@ for end-to-end fine-tuning with novel loss functions such as the CLAP score,
 further boosting performance.
 
 <center>
-  <img src="main_figure_.png" alt="ConsistencyTTA Results" title="Results" width="480"/>
+    <img src="main_figure.png" alt="ConsistencyTTA Results" title="Results" width="480"/>
 </center>
-
-**2024/06 Updates:**
-
-- ConsistencyTTA has been accepted to ***INTERSPEECH 2024***! We look forward to meeting you in Kos Island.
 
 
 ## Getting Started
+
+This codebase performs training, evaluation, and inference.
+If you only wish to do inference, there is a simpler implementation at [`easy_inference`](https://github.com/Bai-YT/ConsistencyTTA/tree/main/easy_inference).
 
 This codebase uses PyTorch as the central implementation tool, with extensive usage of HuggingFace's Accelerator package.
 The required packages can be found in `environment.yml`.
@@ -138,8 +144,8 @@ stack up against previous methods, most of which mostly require hundreds of gene
 ## Cite Our Work (BibTeX)
 
 ```bibtex
-@article{bai2023accelerating,
-  title={Accelerating Diffusion-Based Text-to-Audio Generation with Consistency Distillation},
+@article{bai2023consistencytta,
+  title={ConsistencyTTA: Accelerating Diffusion-Based Text-to-Audio Generation with Consistency Distillation},
   author={Bai, Yatong and Dang, Trung and Tran, Dung and Koishida, Kazuhito and Sojoudi, Somayeh},
   journal={arXiv preprint arXiv:2309.10740},
   year={2023}

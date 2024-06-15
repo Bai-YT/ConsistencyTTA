@@ -34,9 +34,13 @@ Furthermore, the non-recurrent differentiable structure of the consistency model
 for end-to-end fine-tuning with novel loss functions such as the CLAP score,
 further boosting performance.
 
-<center>
-    <img src="main_figure.png" alt="ConsistencyTTA Results" title="Results" width="480"/>
-</center>
+<p align="center">
+    <img src="main_figure.png" alt="ConsistencyTTA Results" title="Results" width="450"/> &nbsp;&nbsp;
+    <video width="216" height="384" controls>
+        <source src="demo_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</p>
 
 
 ## Getting Started

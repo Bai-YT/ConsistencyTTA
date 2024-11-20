@@ -148,11 +148,11 @@ stack up against previous methods, most of which mostly require hundreds of gene
 ## Cite Our Work (BibTeX)
 
 ```bibtex
-@article{bai2023consistencytta,
+@inproceedings{bai2024consistencytta,
   title={ConsistencyTTA: Accelerating Diffusion-Based Text-to-Audio Generation with Consistency Distillation},
   author={Bai, Yatong and Dang, Trung and Tran, Dung and Koishida, Kazuhito and Sojoudi, Somayeh},
-  journal={arXiv preprint arXiv:2309.10740},
-  year={2023}
+  booktitle = {INTERSPEECH},
+  year = {2024}
 }
 ```
 
